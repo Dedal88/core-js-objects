@@ -38,7 +38,7 @@ function mergeObjects(objects) {
 
   objects.forEach((item) => {
     Object.entries(item).forEach(([key, value]) => {
-      totalObj[key] = (totalObj[key] || 0) + value;
+      totalObj[key] = totalObj[key] ? totalObj[key] + value : value;
     });
   });
 
